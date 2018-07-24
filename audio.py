@@ -78,6 +78,12 @@ async def stop(ctx):
     voice_client=bot.voice_client_in(server)
     await voice_client.disconnect()
 
+client = discord.Client
 
+@client.event
+async def on_message(message):
+    if message.content == "ping":
+        client.send_message(message.channel, "pong")
+    
 
 bot.run(os.environ['BOT_TOKEN'])
