@@ -6,7 +6,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 
 
-bot=commands.Bot(command_prefix='!.')
+bot=commands.Bot(command_prefix='a.')
 
 from discord import opus
 OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll',
@@ -78,12 +78,6 @@ async def stop(ctx):
     voice_client=bot.voice_client_in(server)
     await voice_client.disconnect()
 
-client = discord.Client
 
-@client.event
-async def on_message(message):
-    if message.content == "ping":
-        client.send_message(message.channel, "pong")
-    
 
 bot.run(os.environ['BOT_TOKEN'])
