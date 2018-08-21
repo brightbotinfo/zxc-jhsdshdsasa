@@ -32,7 +32,9 @@ load_opus_lib()
 
 @bot.event
 async def on_ready():
-    print("hi")
+    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+    print("|[       Bot is Online      ]|")
+    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 opts = {
             'default_search': 'auto',
             'quiet': True,
