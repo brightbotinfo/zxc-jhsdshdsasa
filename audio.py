@@ -50,17 +50,7 @@ async def join(ctx):
 players={}
 @bot.command(pass_context=True)
 async def play(ctx, *,url):
-          Usage:
-            {command_prefix}play song_link
-            {command_prefix}play text to search for
-            {command_prefix}play spotify_uri
 
-        Adds the song to the playlist.  If a link is not provided, the first
-        result from a youtube search is added to the queue.
-
-        If enabled in the config, the bot will also support Spotify URIs, however
-        it will use the metadata (e.g song name and artist) to find a YouTube
-        equivalent of the song. Streaming from Spotify is not possible.
     global play_server
     play_server = ctx.message.server
     voice = bot.voice_client_in(play_server)
