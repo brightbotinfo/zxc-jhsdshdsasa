@@ -43,8 +43,7 @@ opts = {
 @bot.command(pass_context=True)
 async def join(ctx):
     channel = ctx.message.author.voice.voice_channel
-    await bot.join_voice_channel(channel)
-	 bot.say("Summons the bot to join your voice channel.")
+    await bot.join_voice_channel(channel) bot.say("Summons the bot to join your voice channel.")
 
 
 
